@@ -339,12 +339,22 @@ section { position: relative; }
 
 .weekend-intro p { font-size: 1.08rem; color: var(--body-text); }
 
+.pill-row-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin: 28px 0 0;
+}
+
 .pill-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 14px;
 }
 
 .pill {
