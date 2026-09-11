@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Becoming One Weekend logo">
+  <defs>
+    <linearGradient id="ringGrad" x1="25%" y1="0%" x2="75%" y2="100%">
+      <stop offset="0%" stop-color="#9b2f96"/>
+      <stop offset="50%" stop-color="#6a5a9a"/>
+      <stop offset="100%" stop-color="#2f8fc0"/>
+    </linearGradient>
+    <linearGradient id="markGrad" x1="15%" y1="0%" x2="85%" y2="100%">
+      <stop offset="0%" stop-color="#5a3277"/>
+      <stop offset="100%" stop-color="#2f8fc0"/>
+    </linearGradient>
+    <clipPath id="innerClip">
+      <circle cx="100" cy="100" r="82"/>
+    </clipPath>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#ringGrad)" stroke-width="12"/>
+  <g clip-path="url(#innerClip)">
+    <path d="M100,58 C97,53 89,53 89,60 C89,66 100,73 100,73 C100,73 111,66 111,60 C111,53 103,53 100,58 Z" fill="url(#markGrad)"/>
+    <circle cx="69" cy="88" r="19" fill="url(#markGrad)"/>
+    <circle cx="131" cy="88" r="19" fill="url(#markGrad)"/>
+    <path d="M40,106 C33,142 62,172 100,144 C138,172 167,142 160,106" fill="none" stroke="url(#markGrad)" stroke-width="15" stroke-linecap="round"/>
+    <path d="M58,182 C88,160 90,124 100,110 C110,124 112,160 142,182" fill="none" stroke="url(#markGrad)" stroke-width="13" stroke-linecap="round"/>
+  </g>
+</svg>
