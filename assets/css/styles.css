@@ -357,18 +357,7 @@ section { position: relative; }
   border-radius: 999px;
 }
 
-.weekend-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 40px;
-  align-items: start;
-}
-
-@media (max-width: 860px) {
-  .weekend-grid { grid-template-columns: 1fr; }
-}
-
-.receive-card, .schedule-card {
+.receive-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -376,7 +365,12 @@ section { position: relative; }
   box-shadow: var(--shadow-card);
 }
 
-.receive-card h3, .schedule-card h3 {
+.receive-card-solo {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.receive-card h3 {
   font-size: 1.15rem;
   margin-bottom: 18px;
 }
@@ -406,39 +400,6 @@ section { position: relative; }
   font-size: 0.85rem;
   margin-top: 2px;
 }
-
-.schedule-block { margin-bottom: 22px; }
-
-.schedule-block:last-child { margin-bottom: 0; }
-
-.schedule-block h4 {
-  font-family: var(--font-display);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 10px;
-}
-
-.schedule-row {
-  display: flex;
-  gap: 16px;
-  padding: 9px 0;
-  border-top: 1px solid var(--border);
-  font-size: 0.94rem;
-}
-
-.schedule-block h4 + .schedule-row { border-top: none; }
-
-.schedule-time {
-  flex: none;
-  width: 128px;
-  color: var(--purple);
-  font-weight: 600;
-}
-
-.schedule-row.is-session .schedule-label { font-weight: 600; color: var(--ink); }
 
 /* ==========================================================================
    Sessions
@@ -614,30 +575,61 @@ section { position: relative; }
   margin-bottom: 20px;
 }
 
-.contact-line {
+.contact-form {
+  text-align: left;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 14px 0;
-  border-top: 1px solid var(--border);
-  font-size: 1.05rem;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-family: var(--font-display);
   font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ink);
 }
 
-.contact-line:first-of-type { border-top: none; }
-
-.contact-line a { color: var(--plum); }
-
-.contact-line a:hover { text-decoration: underline; }
-
-.host-card .actions {
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  margin-top: 24px;
-  flex-wrap: wrap;
+.form-row input,
+.form-row textarea {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  color: var(--ink);
+  background: var(--lilac-25);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  resize: vertical;
 }
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--purple);
+  background: var(--white);
+}
+
+.form-submit {
+  margin-top: 4px;
+  width: 100%;
+}
+
+.form-status {
+  margin: 0;
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-status.success { color: #2b7a4b; }
+
+.form-status.error { color: #b3423a; }
 
 .host-note {
   margin-top: 26px;

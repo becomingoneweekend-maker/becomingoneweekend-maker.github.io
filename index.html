@@ -91,75 +91,13 @@
         </div>
       </div>
 
-      <div class="weekend-grid">
-        <div class="receive-card">
-          <h3>What You Receive</h3>
-          <ul class="receive-list">
-            <li><span class="check">&#10003;</span> A participant guide for every couple</li>
-            <li><span class="check">&#10003;</span> Guided reflection and prayer times</li>
-            <li><span class="check">&#10003;</span> A couples' communion service to close</li>
-          </ul>
-        </div>
-
-        <div class="schedule-card">
-          <h3>Weekend Schedule</h3>
-
-          <div class="schedule-block">
-            <h4>Friday Evening</h4>
-            <div class="schedule-row">
-              <span class="schedule-time">6:00 PM</span>
-              <span class="schedule-label">Dinner</span>
-            </div>
-            <div class="schedule-row is-session">
-              <span class="schedule-time">7:15 PM</span>
-              <span class="schedule-label">Session 1 &mdash; Becoming One Flesh</span>
-            </div>
-          </div>
-
-          <div class="schedule-block">
-            <h4>Saturday Morning</h4>
-            <div class="schedule-row">
-              <span class="schedule-time">8:30 AM</span>
-              <span class="schedule-label">Continental Breakfast</span>
-            </div>
-            <div class="schedule-row is-session">
-              <span class="schedule-time">9:00 AM</span>
-              <span class="schedule-label">Session 2 &mdash; Becoming One Through Covenant</span>
-            </div>
-            <div class="schedule-row">
-              <span class="schedule-time">9:45 AM</span>
-              <span class="schedule-label">Break</span>
-            </div>
-            <div class="schedule-row is-session">
-              <span class="schedule-time">10:00 AM</span>
-              <span class="schedule-label">Session 3 &mdash; Becoming One Through Roles</span>
-            </div>
-            <div class="schedule-row is-session">
-              <span class="schedule-time">10:45 AM</span>
-              <span class="schedule-label">Session 4 &mdash; Becoming One Through Forgiveness</span>
-            </div>
-            <div class="schedule-row">
-              <span class="schedule-time">11:30&ndash;12:45</span>
-              <span class="schedule-label">Date Lunch with Spouse</span>
-            </div>
-          </div>
-
-          <div class="schedule-block">
-            <h4>Saturday Afternoon</h4>
-            <div class="schedule-row is-session">
-              <span class="schedule-time">1:00 PM</span>
-              <span class="schedule-label">Session 5 &mdash; Oneness Through Love &amp; Intimacy</span>
-            </div>
-            <div class="schedule-row is-session">
-              <span class="schedule-time">1:45 PM</span>
-              <span class="schedule-label">Session 6 &mdash; Oneness Through Communion</span>
-            </div>
-            <div class="schedule-row">
-              <span class="schedule-time">2:30 PM</span>
-              <span class="schedule-label">Prayer &amp; Dismissal</span>
-            </div>
-          </div>
-        </div>
+      <div class="receive-card receive-card-solo">
+        <h3>What You Receive</h3>
+        <ul class="receive-list">
+          <li><span class="check">&#10003;</span> A participant guide for every couple</li>
+          <li><span class="check">&#10003;</span> Guided reflection and prayer times</li>
+          <li><span class="check">&#10003;</span> A couples' communion service to close</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -300,16 +238,26 @@
 
       <div class="host-card">
         <h3>Request a Date</h3>
-        <div class="contact-line">
-          &#9993; <a href="mailto:becomingoneweekend@gmail.com">becomingoneweekend@gmail.com</a>
-        </div>
-        <div class="contact-line">
-          &#9742; <a href="tel:+15099613996">(509) 961-3996</a>
-        </div>
-        <div class="actions">
-          <a class="btn btn-solid" href="mailto:becomingoneweekend@gmail.com?subject=Becoming%20One%20Weekend%20-%20Request%20a%20Date">Email Us</a>
-          <a class="btn btn-ghost" href="tel:+15099613996">Call Us</a>
-        </div>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <label for="church">Church Name</label>
+            <input type="text" id="church" name="church" autocomplete="organization">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your church and any preferred dates."></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid form-submit">Send Request</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
       </div>
 
       <p class="host-note">Best suited for engaged couples, newlyweds, couples 30 years in, blended families, and church leadership couples.</p>
@@ -340,9 +288,9 @@
       <div>
         <h4>Contact</h4>
         <ul class="footer-links">
-          <li><a href="mailto:becomingoneweekend@gmail.com">becomingoneweekend@gmail.com</a></li>
-          <li><a href="tel:+15099613996">(509) 961-3996</a></li>
-          <li>One Life Family Worship &middot; Selah, WA</li>
+          <li>One Life Family Worship</li>
+          <li>Selah, WA</li>
+          <li><a href="#host">Send a message</a></li>
         </ul>
       </div>
     </div>
